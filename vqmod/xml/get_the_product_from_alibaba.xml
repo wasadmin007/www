@@ -1,0 +1,41 @@
+<modification>
+	<id><![CDATA[Get the product from Alibaba]]></id>
+	<version><![CDATA[1.5.2.1]]></version>
+	<vqmver><![CDATA[2.1.5]]></vqmver>
+	<author><![CDATA[http://opencarting.com]]></author>
+	<file name="admin/controller/catalog/product.php">
+		<operation error="skip">
+			<search position="after" error="skip"><![CDATA[public function insert() {]]></search>
+			<add>
+				<![CDATA[ 
+					$this->document->addScript('/www/getSingleProduct/js/alibaba.js');
+				]]>
+			</add>
+		</operation>
+		<operation error="skip">
+			<search position="after" error="skip"><![CDATA[public function update() {]]></search>
+			<add>
+				<![CDATA[ 
+					$this->document->addScript('/www/getSingleProduct/js/alibaba.js');
+				]]>
+			</add>
+		</operation>
+		<operation error="skip">
+			<search position="after" error="skip"><![CDATA[public function add() {]]></search>
+			<add>
+				<![CDATA[ 
+					$this->document->addScript('/www/getSingleProduct/js/alibaba.js');
+				]]>
+			</add>
+		</operation>
+		<operation error="skip">
+			<search position="after" error="skip"><![CDATA[public function edit() {]]></search>
+			<add>
+				<![CDATA[ 
+					$this->document->addScript('/www/getSingleProduct/js/alibaba.js');
+				]]>
+			</add>
+		</operation>
+	</file>
+</modification>
+
